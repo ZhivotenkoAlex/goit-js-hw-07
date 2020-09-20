@@ -6,5 +6,3 @@ inputRange.addEventListener("input", fontSizeControl);
 function fontSizeControl(event) {
     text.style.fontSize = event.currentTarget.value + "px";
 };
-
-console.log(text.attributes);
