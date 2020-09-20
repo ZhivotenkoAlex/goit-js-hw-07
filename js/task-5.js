@@ -2,7 +2,7 @@ const input = document.querySelector("#name-input");
 const output = document.querySelector("#name-output")
 
 const greeting = (event) => {
-    output.textContent = event.currentTarget !== "" ? event.currentTarget.value : "Незнакомец";
+    output.textContent = input.value === "" ? "незнакомец" : event.currentTarget.value;
 
 
     // output.textContent = event.currentTarget.value;

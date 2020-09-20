@@ -10,12 +10,26 @@ const ingredients = [
 const listForAddingItems = document.querySelector(`#ingredients`);
 
 
-const addListItems = (array, list) => {
-    array.forEach(item => {
+
+const addListItems = (array) => {
+    const listArray = array.map(item => {
         const listItem = document.createElement('li');
         listItem.textContent = item;
-        list.appendChild(listItem);
+        return listItem;
     })
+    listForAddingItems.append(...listArray);
 }
 
-addListItems(ingredients, listForAddingItems);
+addListItems(ingredients);
+
+// 2й вариант
+
+// const addListItems = (array, list) => {
+//     array.forEach(item => {
+//         const listItem = document.createElement('li');
+//         listItem.textContent = item;
+//         list.appendChild(listItem);
+//     })
+// }
+
+// addListItems(ingredients, listForAddingItems);
